@@ -1,0 +1,47 @@
+﻿<Page x:Class="Lnc_dis.Lnc_Dis_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lnc_dis"
+      mc:Ignorable="d" 
+      d:DesignHeight="514" d:DesignWidth="1260"
+      Title="Lnc_Dis_Page">
+
+    <Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="514" Width="795"  CanUserAddRows="False" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged" IsReadOnly="True" EnableRowVirtualization="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="排名" Width="265" Binding="{Binding Path=rank, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="LncRNA" Width="265" Binding="{Binding Path=lnc_id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="关联得分" Width="265" Binding="{Binding Path=show, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="ass_dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="480" Width="423"  CanUserAddRows="False" AutoGenerateColumns="False" Margin="837,35,0,-1" IsReadOnly="True" SelectionChanged="ass_dataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="编号" Width="31" Binding="{Binding Path=id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="DOID" Width="101" Binding="{Binding Path=doid, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="疾病名" Width="311" Binding="{Binding Path=name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="find_textBox" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="388" Margin="872,0,0,0" FontSize="12"  VerticalContentAlignment="Center" TextChanged="find_textBox_TextChanged"/>
+        <Button x:Name="search_button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="35" Height="35" RenderTransformOrigin="1.173,0.478" Margin="837,0,0,0" Click="search_button_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="Resources/search.png" Height="35" Width="35" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="Resources/searchChoose.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="514" Margin="795,0,0,0" VerticalAlignment="Top" Width="42" Background="DeepSkyBlue"/>
+    </Grid>
+</Page>

@@ -1,0 +1,7 @@
+C:\Users\msi\Desktop\lnc_third_layer\lnc_third_layer\bin\Debug\lnc_third_layer.exe.config
+C:\Users\msi\Desktop\lnc_third_layer\lnc_third_layer\bin\Debug\lnc_third_layer.exe
+C:\Users\msi\Desktop\lnc_third_layer\lnc_third_layer\bin\Debug\lnc_third_layer.pdb
+C:\Users\msi\Desktop\lnc_third_layer\lnc_third_layer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\msi\Desktop\lnc_third_layer\lnc_third_layer\obj\Debug\lnc_third_layer.csprojResolveAssemblyReference.cache
+C:\Users\msi\Desktop\lnc_third_layer\lnc_third_layer\obj\Debug\lnc_third_layer.exe
+C:\Users\msi\Desktop\lnc_third_layer\lnc_third_layer\obj\Debug\lnc_third_layer.pdb

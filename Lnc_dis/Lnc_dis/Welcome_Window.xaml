@@ -1,0 +1,18 @@
+﻿<Window x:Class="Lnc_dis.Welcome_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lnc_dis"
+        mc:Ignorable="d"
+        Title="Welcome_Window" WindowState="Normal" Height="538.551" Width="760.9">
+    <Grid Background="DeepSkyBlue">
+        <Image x:Name="campionimage" HorizontalAlignment="Left" Height="119" Margin="48,10,0,0" VerticalAlignment="Top" Width="128" Source="Resources/冠军.png"/>
+        <Grid HorizontalAlignment="Left" Height="291" Margin="48,134,0,0" VerticalAlignment="Top" Width="648" Background="White">
+            <Label x:Name="label" Content="   有效的分析LncRNA-疾病关联能够为药物的研发节省大量时间与成本， 本系统&#xD;&#xA;能够预测lncRNA-疾病关联并给出相应得分，用户可通过此系统进行查询。" HorizontalAlignment="Left" VerticalAlignment="Top" Height="291" Width="648" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"/>
+        </Grid>
+        <Button x:Name="okbutton" Content="开始使用" HorizontalAlignment="Left" Margin="216,446,0,0" VerticalAlignment="Top" Width="98" Height="34" Click="okbutton_Click"/>
+        <Button x:Name="quit_button" Content="退出系统" HorizontalAlignment="Left" Margin="452,446,0,0" VerticalAlignment="Top" Width="98" Height="34" Click="quit_button_Click"/>
+        <Label x:Name="titleLabel" Content="LncRNA-疾病关联预测系统" HorizontalAlignment="Left" Margin="197,47,0,0" VerticalAlignment="Top" FontSize="40"/>
+    </Grid>
+</Window>
